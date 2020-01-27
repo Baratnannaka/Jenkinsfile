@@ -1,10 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage("git chockout"){
+        stage("git checokeout"){
             steps{
-                git 'https://github.com/Baratnannaka/maven-practice.git'
-                
+               git 'https://github.com/Baratnannaka/maven-practice.git' 
+            }
+        }
+        stage("mvn build"){
+            steps{
+                sh "mvn clean package"
             }
         }
     }
