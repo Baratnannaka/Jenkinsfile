@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage("git chockout"){
+            steps{
+                git 'https://github.com/Baratnannaka/maven-practice.git'
+                
+            }
+        }
+    }
+}
