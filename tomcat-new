@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("git checokeout"){
             steps{
-               git 'https://github.com/Baratnannaka/maven-practice.git' 
+               git 'https://github.com/Baratnannaka/rideesay.git' 
             }
         }
         stage("mvn build"){
