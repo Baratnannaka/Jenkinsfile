@@ -1,6 +1,9 @@
 currentBuild.displayName = "examplemd#"+currentBuild.number
 pipeline{
     agent any
+    triggers {
+        pollSCM('* * * * *')
+    }
 
     environment{
         PATH = "/opt/maven/bin:$PATH"
